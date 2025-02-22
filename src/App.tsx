@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Preloader from "./components/Preloader";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { Home } from "lucide-react";
+import Navbar from "./components/NavBar";
 const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -9,9 +11,14 @@ const App = () => {
       {loading ? (
         <Preloader onFinish={() => setLoading(false)} />
       ) : (
-        <div className="text-center text-white text-4xl font-bold p-10">
-          Welcome to the App
-        </div>
+      <Router>
+        <Navbar/>
+       <main className="mt-16">
+       <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+       </main>
+      </Router>
       )}
     </div>
   );
