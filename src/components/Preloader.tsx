@@ -29,13 +29,13 @@ const Preloader = ({ onFinish }: LoadingProps) => {
 
   return (
     <motion.div
-      className="flex items-center justify-center h-screen bg-gray-900"
+      className="flex items-center justify-center h-screen w-full bg-gray-900"
       initial={{ opacity: 1, y: 0 }}
       animate={animateExit ? { y: "-100vh", opacity: 0 } : { opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
       <motion.h1
-        className="text-8xl font-extrabold bg-clip-text text-transparent"
+        className="text-8xl font-extrabold bg-clip-text text-transparent font-[Quicksand]"
         style={{
           background: "linear-gradient(to right, #40E0D0, #FF8C00, #FF0080)",
           WebkitBackgroundClip: "text",
