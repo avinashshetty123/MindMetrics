@@ -29,7 +29,7 @@ const Preloader = ({ onFinish }: LoadingProps) => {
 
   return (
     <motion.div
-      className="flex items-center justify-center h-screen w-full bg-gray-900"
+      className="flex items-center justify-center h-screen w-full"
       initial={{ opacity: 1, y: 0 }}
       animate={animateExit ? { y: "-100vh", opacity: 0 } : { opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}

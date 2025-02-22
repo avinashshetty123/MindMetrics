@@ -1,19 +1,19 @@
 import { useState } from "react";
 import Preloader from "./components/Preloader";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import { Home } from "lucide-react";
 import Navbar from "./components/NavBar";
+import Home from "./pages/Home";
 const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   return (
-    <div className="bg-gradient-to-r from-emerald-400 to-cyan-400 min-h-screen flex items-center justify-center">
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center text-center p-6 ">
       {loading ? (
         <Preloader onFinish={() => setLoading(false)} />
       ) : (
       <Router>
         <Navbar/>
-       <main className="mt-16">
+       <main >
        <Routes>
           <Route path="/" element={<Home/>} />
         </Routes>

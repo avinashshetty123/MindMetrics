@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { BrainCircuit, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router";
 
 const Navbar = () => {
@@ -28,7 +28,8 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-        Recipe Book
+        <BrainCircuit size={32} className="inline-block text-white m-2 text-center"/>
+        MindMetrics
         </motion.div>
 
         {/* Desktop Menu */}
